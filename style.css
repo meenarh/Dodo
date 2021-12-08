@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: capitalize;
+    text-transform: none;
     outline: none;
     border: none;
     text-decoration: none;
@@ -13,22 +13,26 @@
 
 html{
     font-size: 62.5%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body{
-    overflow: hidden;
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     background-color: #f6f0c4;
-    background-image: linear-gradient(150deg, #f6f0c4 0%, #d99ec9 54%);
+    background-image: linear-gradient(150deg, #ecb336 0%, #970971 54%);
     padding: 5.5rem;
 }
 
 section{
     padding: 1rem 7%;
+    min-height: 100%;
+}
+
+a{
+    text-decoration: none;
 }
 
 header{
@@ -103,7 +107,6 @@ header .navbar ul li a:hover{
 }
 
 .home{
-    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,8 +120,8 @@ header .navbar ul li a:hover{
     color: #fff;
 }
 
-.home .name span{
-    font-size: 2.5em;
+.home span.name{
+    font-size: 3.5em;
     color: #fff;
 }
 
@@ -180,10 +183,6 @@ header .navbar ul li a:hover{
 .home .share a:hover{
     background: rgba(255, 255, 255, .5);
     color: #555;
-}
-
-.about{
-    min-height: 100%;
 }
 
 .about .content h3{
@@ -253,10 +252,6 @@ header .navbar ul li a:hover{
     width: 40%;
 }
 
-.services{
-    min-height: 100%;
-}
-
 .services .box-container{
     padding: 2rem 0;
     display: flex;
@@ -285,4 +280,161 @@ header .navbar ul li a:hover{
     color: #fff;
     font-size: 1.5rem;
     padding: .5rem 5rem;
+}
+
+.project .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.project .box-container .box{
+    width: 30rem;
+    padding: 0 2rem;
+    padding-bottom: 4rem;
+    border-left: .2rem solid #eee;
+}
+
+.project .box-container .box .project-info{
+    font-size: 2rem;
+    color: #eee;
+    position: relative;
+}
+
+.project .box-container .box .project-info::before{
+    content: '';
+    position: absolute;
+    top: .3rem;
+    left: -3.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.project .box-container .box .project-info a{
+    font-size: 1rem;
+    color: #ecb336;
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.project .box-container .box .project-info p{
+    font-size: 1.3rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.contact .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 7rem;
+}
+
+.contact .row form{
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.contact .row form .box{
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    height: 4rem;
+    width: 49%;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+    color: #eee;
+}
+
+.contact .row form .message{
+    padding: 1rem;
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+
+.contact .row form .btn{
+    margin-bottom: 1rem;
+}
+
+.contact .row .content{
+    padding: 0.5rem;
+}
+
+.contact .row .content .icons{
+    padding: 1rem 0;
+} 
+
+.contact .row .content .icons h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #fff;    
+    display: flex;
+}
+
+.contact .row .content .icons h3 i{
+    padding-right: .5rem;
+}
+
+.contact .row .content .icons p{
+    font-size: 1.5rem;
+    color: #eee;
+}
+
+.contact .row .content .icons p > a{
+    font-size: 1.5rem;
+    color: #eee;
+    text-decoration: none;
+}
+
+.contact .row .content .icons p > a:hover{
+    color: #ecb336;
+}
+
+@media screen and (max-width:766px){
+
+    body{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        min-height: 100%;
+    }
+
+    .share{
+        display: flex;
+        width: 100%;
+    }
+
+    .share a{
+        width: 50%;
+    }
+
+    .about{
+        width: 100%;
+        min-height: 100%;
+    }
+
+    .skills{
+        height: 70%;
+        width: 100%;
+    }
+/* 
+    .contact{
+        display: flex;
+    } */
+
 }
